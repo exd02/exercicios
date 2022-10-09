@@ -141,11 +141,13 @@ void listaCliente::printTail(int qtd)
 {
   if (this->quantidade < qtd)
     return;
-
+    
+  std::cout << "\n";
   for (int i = this->quantidade-1; i >= this->quantidade-qtd; i--)
   {
     lista[i].printarClienteCurto();
   }
+  std::cout << "\n";
 }
 
 void listaCliente::printHead()
@@ -158,8 +160,10 @@ void listaCliente::printHead(int qtd)
   if (this->quantidade < qtd-1)
     return;
 
+  std::cout << "\n";
   for (int i=0; i<qtd; i++)
   {
     lista[i].printarClienteCurto();
   }
+  std::cout << "\n";
 }
