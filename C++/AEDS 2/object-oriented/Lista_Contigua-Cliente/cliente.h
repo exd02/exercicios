@@ -9,7 +9,7 @@
  */
 #include <limits>
 
-class cliente // A classe cliente deverá conter os seguintes atributos (nome, sexo, idade, cpf, telefone)
+class cliente
 {
 private:
   std::string nome;

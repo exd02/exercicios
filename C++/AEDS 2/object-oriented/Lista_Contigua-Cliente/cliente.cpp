@@ -5,7 +5,7 @@ cliente::cliente()
   this->nome = "";
   this->sexo = 'M';
   this->idade = 0;
-  this->cpf = "";
+  this->cpf = '\0';
   this->telefone = "";
 }
 
