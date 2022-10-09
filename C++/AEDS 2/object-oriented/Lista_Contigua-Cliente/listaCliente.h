@@ -49,11 +49,11 @@ public:
   /* Printar os 5 últimos clientes */
   void printTail();
   /* Printar os X últimos clientes */
-  void printTail(const int qtd);
+  void printTail(int qtd);
 
   /* Printar os 5 primeiros clientes */
   void printHead();
   /* Printar os X primeiros clientes */
-  void printHead(const int qtd);
+  void printHead(int qtd);
 
 };

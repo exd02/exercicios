@@ -101,12 +101,11 @@ void listaCliente::addClientesAleatorios(int qtd)
     return;
   
   cliente add;
-  for (int i=1; i<=qtd; i++)
+  for (int i=0; i<=qtd; i++)
   {
     std::string pessoaAleatoria = "PessoaAleatoria ";
     add.setNome(pessoaAleatoria.append(std::to_string(i)));
     add.setSexo('M');
-
     add.setIdade(rand() % 100);
     add.setCpf(std::to_string(rand() % 99999999999 + 10000000000));
     add.setTelefone(std::to_string(rand() % 99999999999 + 10000000000));
@@ -138,12 +137,12 @@ void listaCliente::printTail()
   printTail(5);
 }
 
-void listaCliente::printTail(const int qtd)
+void listaCliente::printTail(int qtd)
 {
-  if (this->quantidade < qtd-1)
+  if (this->quantidade < qtd)
     return;
 
-  for (int i = this->quantidade; i > this->quantidade-qtd; i--)
+  for (int i = this->quantidade-1; i >= this->quantidade-qtd; i--)
   {
     lista[i].printarClienteCurto();
   }
@@ -154,12 +153,12 @@ void listaCliente::printHead()
   printHead(5);
 }
 
-void listaCliente::printHead(const int qtd)
+void listaCliente::printHead(int qtd)
 {
   if (this->quantidade < qtd-1)
     return;
 
-  for (int i = 0; i < qtd-1; i++)
+  for (int i=0; i<qtd; i++)
   {
     lista[i].printarClienteCurto();
   }
