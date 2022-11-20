@@ -12,6 +12,9 @@ void encadeada::insert()
   novo->setProx(head); // O nodo novo irá apontar para o atual head
   this->head = novo; // Agora a head aponta para o novo nodo
   this->qtd++;
+
+  nodo* ultimo = getElemento(this->qtd);
+  ultimo->setProx(this->head);
 }
 
 void encadeada::remove()
@@ -25,9 +28,6 @@ void encadeada::remove()
 
 nodo* encadeada::getElemento(int n)
 {
-  if (n == this->qtd) // Caso seja o ultimo, retorna o primeiro
-    return this->head;
-
   nodo *p = this->head;
   int i = 1;
   while(i < n && p->getProx() != nullptr){

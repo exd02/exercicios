@@ -14,7 +14,7 @@ int main() {
   std::cout << "Head: " << lista.getHead() << "\n";
 
   nodo* pp = lista.getElemento(3);
-  std::cout << "Proximo do ultimo elemento: " << pp->getProx();
+  std::cout << "Proximo do ultimo elemento: " << pp->getProx() << "\n";
   
   return 0;
 }
